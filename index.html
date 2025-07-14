@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gestão de Resíduos e Consumo Consciente</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" >
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Projeto" />
+            <h1>Projeto Cidade Sustentável</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#objetivo">Objetivos</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#acoes">Ações</a></li>
+                <li><a href="login.html" target="_blank">Área restrita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Gestão Eficiente de Resíduos e Consumo Consciente</h2>
+        <p>Juntos por uma cidade mais limpa e sustentável.</p>
+        <img src="./img/cidade-sustentavel.png" alt="Imagem ilustrativa cidade sustentável" />
+    </section>
+
+    <section id="objetivo">
+        <h2>Objetivo do Projeto</h2>
+        <p>Promover a conscientização sobre a gestão de resíduos e estimular o consumo consciente, alinhado aos ODS 11 e 12 da ONU, para tornar nossa cidade mais resiliente e sustentável.</p>
+    </section>
+
+    <section id="impacto">
+        <h2>Impacto</h2>
+        <ul>
+            <li><strong>O ciclo da reciclagem explicado:</strong> Entenda como seus resíduos podem ganhar nova vida.</li>
+            <li><strong>Como sua ação individual pode transformar a cidade:</strong> Pequenas atitudes geram grandes mudanças.</li>
+            <li><strong>Impactos da má gestão de resíduos:</strong> Poluição, enchentes e problemas de saúde pública.</li>
+        </ul>
+    </section>
+
+    <section id="acoes">
+        <h2>Ações</h2>
+        <ul>
+            <li>Doe seus recicláveis para cooperativas locais</li>
+            <li>Participe de campanhas e eventos</li>
+            <li>Seja Parceiro: incentive sua empresa ou comunidade a participar</li>
+        </ul>
+        <!-- Botão para chamar modal de cadastro de parceiro -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Cadastro de Parceiro</button>
+
+        <!-- Modal de parceiro -->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Cadastro de parceiros</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-parceiro">
+                        <label>Nome do Parceiro</label>
+                        <input type="text" class="form-control" name="nomeParceiro" required><br>
+
+                        <label>Tipo do Parceiro</label>
+                        <select class="form-select" name="tipoParceiro" required>
+                            <option value="">Selecione</option>
+                            <option value="ECO">Ecopontos</option>
+                            <option value="COO">Cooperativas</option>
+                            <option value="PEVs">Ponto de Entrega Voluntária</option>
+                        </select><br>
+
+                        <label>Responsável pelo Parceiro</label>
+                        <input type="text" class="form-control" name="responsavelParceiro" required><br>
+
+                        <label>Telefone do Responsável</label>
+                        <input type="tel" class="form-control" name="telResponsavel" required><br>
+
+                        <label>E-mail do Responsável</label>
+                        <input type="email" class="form-control" name="emailResponsavel" required><br>
+
+                        <label class="form-label">Rua</label>
+                        <input type="text" class="form-control" name="rua" required><br>
+
+                        <label class="form-label">Número</label>
+                        <input type="number" class="form-control" name="numero" required><br>
+
+                        <label class="form-label">Bairro</label>
+                        <input type="text" class="form-control" name="bairro" required><br>
+
+                        <label>Tipos de resíduos aceitos:</label><br>
+                        <input type="checkbox" name="papel">
+                        <label>Papel</label><br>
+                        <input type="checkbox" name="plastico">
+                        <label>Plástico</label><br>
+                        <input type="checkbox" name="vidro">
+                        <label>Vidro</label><br>
+                        <input type="checkbox" name="metal">
+                        <label>Metal</label><br>
+                        <input type="checkbox" name="oleoCozinha">
+                        <label>Óleo de Cozinha</label><br>
+                        <input type="checkbox" name="pilhaBateria">
+                        <label>Pilhas e Baterias</label><br>
+                        <input type="checkbox" name="eletronico">
+                        <label>Eletrônicos</label><br>
+                        <input type="checkbox" name="roupa">
+                        <label>Roupas</label><br>
+                        <input type="checkbox" name="outros">
+                        <label>Outros</label><br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success" onclick="enviarParceiro()">Enviar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por: Wesley Benevides</p>
+        <p><a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Conheça os ODS da ONU</a></p>
+        <div class="logos">
+            <img src="./img/prefeitura.png" alt="Prefeitura de Joinville" />
+            <img src="./img/LAB-365.png" alt="Lab365" />
+            <img src="./img/senai.svg" alt="Senai" />
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
